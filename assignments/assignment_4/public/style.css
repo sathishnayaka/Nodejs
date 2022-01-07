@@ -1,0 +1,51 @@
+
+.card{
+    display: inline-block;
+    border: 2px solid black;
+    max-width: 600px;
+    padding: 10px;
+    margin :auto;
+    background-color: rgb(140, 172, 221);
+    color: rgb(241, 239, 239);
+    font-weight: bolder;
+}
+.card p{
+    margin:20px;
+}
+.button{
+    margin: 10px;
+}
+.button p{
+    text-align: center;
+}
+button{
+    color: black;
+    background-color:rgb(21, 212, 155);
+    padding: 10px;
+    border-radius: 10%;
+}
+
+
+.form-container form{
+    margin: auto;
+    width: fit-content;
+    border: 2px solid black;
+    padding: 10px;
+}
+.form-container input{
+    margin-top: 10px;
+}
+.form-container button {
+    margin-top: 10px;
+    border-radius: 0%;
+    background-color: burlywood;
+    font-size: 20px;
+    padding : 5px;
+}
+.form-container p{
+    align-items: center;
+}
+.form-container_2{
+    display: inline-block;
+    margin-left: 14px;
+}
