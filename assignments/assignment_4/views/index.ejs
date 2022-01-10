@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet" />
+    <title>Data Connection</title>
+</head>
+<body>
+  <div class="container">
+    <% users.forEach(user => {%>
+    <div class = "card">
+        <%if(user.isPromoted==null) { %>
+            <p  style = "color:yellow"><%= user.name %></p>
+        <%}
+        else if(user.isPromoted){ %>
+          <p style = "color:green"><%= user.name %></p>
+        <%}
+         else { %>
+            <p style = "color:red"><%= user.name %></p>
+            
+        <% }%>
+        <p><%= user.email %></p>
+        <div class="form-container_2">
+        <form method = "POST" action = "/users/<%= user._id%>/promote?_method=PUT" class="form-container_2">
+          <button>Promote</button>
+        </form>
+        <form method = "POST" action = "/users/<%= user._id%>/demote?_method=PUT" class="form-container_2">
+        <button>Demote</button>
+        </form>
+        <form method = "POST" action = "/users/<%= user._id%>/delete?_method=DELETE" class="form-container_2">
+            <button>Delete</button>
+        </form>
+      </div>
+    </div>  
+    <% })%>
+  </div>
+    <div class="button">
+        <p><a href="/form"><button type="button">Add User</button></a></p>
+    </div>  
+</body>
+</html>
